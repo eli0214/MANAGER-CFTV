@@ -12,6 +12,7 @@ if (indiceEdicao !== null && registros[indiceEdicao]) {
     document.getElementById("email").value = registro.email;
     document.getElementById("senhaEmail").value = registro.senhaEmail;
     document.getElementById("appAcessoExterno").value = registro.appAcessoExterno;
+    document.getElementById("senhaApp").value = registro.senhaApp
     document.getElementById("senhaDVR").value = registro.senhaDVR;
     document.getElementById("dataInstalacao").value = registro.dataInstalacao;
     document.getElementById("rua").value = registro.rua;
@@ -29,6 +30,7 @@ formulario.addEventListener("submit", function (event) {
         email: document.getElementById("email").value,
         senhaEmail: document.getElementById("senhaEmail").value,
         appAcessoExterno: document.getElementById("appAcessoExterno").value,
+        senhaApp: document.getElementById("senhaApp").value,
         senhaDVR: document.getElementById("senhaDVR").value,
         dataInstalacao: document.getElementById("dataInstalacao").value,
         rua: document.getElementById("rua").value,

@@ -1,45 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0b132b, #1c2541, #3a506b);
 }
 
-h1 {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.painel {
-    width: 700px;
-    margin: 0 auto;
-    padding: 40px;
-
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+main {
+    width: 100%;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+}
+
+.painel {
+    width: 90%;
+    max-width: 1100px;
+
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+
+    text-align: center;
+}
+
+.logo {
+    width: 220px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
 }
 
 .card {
-    width: 220px;
-    height: 140px;
+    width: 300px;
+    height: 180px;
+
+    background: white;
+
+    border-radius: 18px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     text-decoration: none;
-    color: #333;
 
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    color: #0d6efd;
 
     transition: .3s;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
 }
 
 .card:hover {
+    transform: translateY(-10px) scale(1.04);
     background: #0d6efd;
     color: white;
+}
+
+.card h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+@media (max-width: 768px){
+
+    .painel{
+        padding:30px;
+    }
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:100%;
+        max-width:320px;
+    }
+
+    h1{
+        font-size:30px;
+    }
 }

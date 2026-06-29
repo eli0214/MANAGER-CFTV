@@ -1,61 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Novo Registro</title>
-    <link rel="stylesheet" href="../css/newService.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../css/newService.css" />
+  </head>
+  <body>
     <h1>NOVO REGISTRO</h1>
-
+    <div class="voltar">
+      <a href="../index.html" class="btn-voltar">Voltar</a>
+    </div>
+    <br /><br />
     <section class="registro">
+      <form id="formRegistro">
+        <h2>Dados do Cliente</h2>
 
-        <form id="formRegistro">
+        <label for="nome">Nome do cliente:</label>
+        <input type="text" id="nome" name="nome" required />
 
-            <h2>Dados do Cliente</h2>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-            <label for="nome">Nome do cliente:</label>
-            <input type="text" id="nome" name="nome" required>
+        <label for="senhaEmail">Senha do E-mail:</label>
+        <input type="text" id="senhaEmail" name="senhaEmail" required />
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="appAcessoExterno">App de acesso externo:</label>
+        <input
+          type="text"
+          id="appAcessoExterno"
+          name="appAcessoExterno"
+          required
+        />
 
-            <label for="senhaEmail">Senha do E-mail:</label>
-            <input type="text" id="senhaEmail" name="senhaEmail" required>
+        <label for="senhaApp">Senha App:</label>
+        <input type="text" id="senhaApp" name="senhaApp" required />
 
-            <label for="appAcessoExterno">App de acesso externo:</label>
-            <input type="text" id="appAcessoExterno" name="appAcessoExterno" required>
+        <label for="senhaDVR">Senha do DVR:</label>
+        <input type="text" id="senhaDVR" name="senhaDVR" required />
 
-            <label for="senhaApp">Senha App:</label>
-            <input type="text" id="senhaApp" name="senhaApp" required>
+        <label for="dataInstalacao">Data da instalação:</label>
+        <input type="date" id="dataInstalacao" name="dataInstalacao" required />
 
-            <label for="senhaDVR">Senha do DVR:</label>
-            <input type="text" id="senhaDVR" name="senhaDVR" required>
+        <h2>Endereço</h2>
 
-            <label for="dataInstalacao">Data da instalação:</label>
-            <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" required />
 
-            <h2>Endereço</h2>
+        <label for="numeroCasa">Número:</label>
+        <input type="number" id="numeroCasa" name="numeroCasa" required />
 
-            <label for="rua">Rua:</label>
-            <input type="text" id="rua" name="rua" required>
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" required />
 
-            <label for="numeroCasa">Número:</label>
-            <input type="number" id="numeroCasa" name="numeroCasa" required>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required />
 
-            <label for="bairro">Bairro:</label>
-            <input type="text" id="bairro" name="bairro" required>
-
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required>
-
-            <button type="submit">Salvar Registro</button>
-
-        </form>
-
+        <button type="submit">Salvar Registro</button>
+      </form>
     </section>
     <script src="../js/newService.js"></script>
-</body>
+  </body>
 </html>

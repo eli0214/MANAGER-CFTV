@@ -79,3 +79,17 @@ button {
 button:hover {
     background-color: #0b5ed7;
 }
+
+.voltar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0b5ed7;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}

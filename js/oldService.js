@@ -17,6 +17,7 @@ function mostrarRegistros() {
             <td>${registro.email}</td>
             <td>${registro.senhaEmail}</td>
             <td>${registro.appAcessoExterno}</td>
+            <td>${registro.senhaApp}</td>
             <td>${registro.senhaDVR}</td>
             <td>${registro.dataInstalacao}</td>
             <td>${registro.rua}</td>
