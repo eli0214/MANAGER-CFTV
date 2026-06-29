@@ -1,11 +1,11 @@
-
 const formulario = document.getElementById("formRegistro");
 
+let registros = JSON.parse(localStorage.getItem("registros")) || [];
 const indiceEdicao = localStorage.getItem("registroEditar");
 
-if (indiceEdicao !== null) {
+// Se estiver editando
+if (indiceEdicao !== null && registros[indiceEdicao]) {
 
-    const registros = JSON.parse(localStorage.getItem("registros")) || [];
     const registro = registros[indiceEdicao];
 
     document.getElementById("nome").value = registro.nome;
@@ -37,17 +37,23 @@ formulario.addEventListener("submit", function (event) {
         cidade: document.getElementById("cidade").value
     };
 
-    let registros = JSON.parse(localStorage.getItem("registros")) || [];
+    if (indiceEdicao !== null && registros[indiceEdicao]) {
 
-    if (indiceEdicao !== null) {
         registros[indiceEdicao] = registro;
         localStorage.removeItem("registroEditar");
+
+        alert("Registro atualizado com sucesso!");
+
     } else {
+
         registros.push(registro);
+
+        alert("Registro salvo com sucesso!");
     }
 
     localStorage.setItem("registros", JSON.stringify(registros));
 
+    formulario.reset();
+
     window.location.href = "oldService.html";
 });
-
