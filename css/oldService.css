@@ -56,3 +56,6 @@ th {
 td {
     font-size: 15px;
 }
+.tabela-container {
+    overflow-x: auto;
+}
